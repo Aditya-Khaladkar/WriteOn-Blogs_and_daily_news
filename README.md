@@ -1,5 +1,6 @@
-# WriteOn-Blogs_and_daily_news
+# WriteOn Blogs and daily news
 An app for blog writing, uploading, and daily news updates. Share your blog posts with others and view them in your profile. Stay informed with daily news from different categories. Simple and intuitive interface. Ideal for writers, bloggers, and news enthusiasts.
+
 ### Tech Stack
 1. Android ( XML and Kotlin ) - For app Development
 2. MVVM - Model view viewmodel Architecture pattern and kotlin coroutines
