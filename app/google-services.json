@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "415593726647",
+    "project_id": "bajaj-task-1",
+    "storage_bucket": "bajaj-task-1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415593726647:android:e994fd54c0a7e0f5b80332",
+        "android_client_info": {
+          "package_name": "com.example.bajaj_task_1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415593726647-382hts68mrlnd8fi9katp60l9pff0kd5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8tHwcAlhPKddaUdL2ET-tpU3CArw65HQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "415593726647-382hts68mrlnd8fi9katp60l9pff0kd5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

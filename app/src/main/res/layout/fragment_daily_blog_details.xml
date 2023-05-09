@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:background="@color/white"
+    tools:context=".ui.dailyBlog.DailyBlogDetails">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imgNewsDetails"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+
+        <TextView
+            android:id="@+id/txtNewsDetailsContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Former Speaker of the Punjab Assembly, Charanjit Singh Atwal, joined the BJP in Delhi in the presence of party president JP Nadda on Friday. He resigned from the primary membership of Shiromani Akali Dal (SAD) on April 19. Atwal, who represented the Phillaur constituency in the 14th Lok Sabha, has served as the Speaker of the Punjab Assembly twice."
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/txtNewsDetailsAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="20dp"
+            android:text="- author name" />
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:id="@+id/btnShareNews"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="20dp"
+        android:src="@drawable/baseline_share_24"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_addBlog"
+            android:icon="@drawable/baseline_add_24"
+            android:title="Add Blog" />
+        <item
+            android:id="@+id/nav_authors"
+            android:icon="@drawable/baseline_menu_book_24"
+            android:title="Trending Authors" />
+        <item
+            android:id="@+id/nav_dailyBlog"
+            android:icon="@drawable/baseline_trending_up_24"
+            android:title="Daily Blog" />
+    </group>
+</menu>

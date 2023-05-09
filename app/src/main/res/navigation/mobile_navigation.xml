@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.bajaj_task_1.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_addBlog"
+        android:name="com.example.bajaj_task_1.ui.add.AddBlog"
+        android:label="Add Blog"
+        tools:layout="@layout/fragment_add_blog" />
+
+    <fragment
+        android:id="@+id/nav_authors"
+        android:name="com.example.bajaj_task_1.ui.authors.TrendingAuthors"
+        android:label="Authors"
+        tools:layout="@layout/fragment_trending_authors" />
+
+    <fragment
+        android:id="@+id/nav_dailyBlog"
+        android:name="com.example.bajaj_task_1.ui.dailyBlog.DailyBlogs"
+        android:label="Daily blogs"
+        tools:layout="@layout/fragment_daily_blogs" >
+        <action
+            android:id="@+id/action_nav_dailyBlog_to_dailyBlogDetails"
+            app:destination="@id/dailyBlogDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/myProfile"
+        android:name="com.example.bajaj_task_1.ui.account.MyProfile"
+        android:label="My Profile"
+        tools:layout="@layout/fragment_my_profile" />
+    <fragment
+        android:id="@+id/dailyBlogDetails"
+        android:name="com.example.bajaj_task_1.ui.dailyBlog.DailyBlogDetails"
+        android:label="Details"
+        tools:layout="@layout/fragment_daily_blog_details" />
+
+
+</navigation>
