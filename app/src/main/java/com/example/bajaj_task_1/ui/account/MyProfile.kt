@@ -1,10 +1,12 @@
 package com.example.bajaj_task_1.ui.account
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.view.size
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -55,12 +57,14 @@ class MyProfile : Fragment() {
                         blogListArray!!.add(c!!)
                     }
                     blogAdapter.notifyDataSetChanged()
+
                 }
             }.addOnFailureListener { // if we do not get any data or any error we are displaying
                 // a toast message that we do not get any data
                 Toast.makeText(context, "Fail to get the data.", Toast.LENGTH_SHORT)
                     .show()
             }
+
 
         // delete blog
         ItemTouchHelper(object : ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.RIGHT) {
@@ -73,6 +77,9 @@ class MyProfile : Fragment() {
             }
 
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+                val position = viewHolder.adapterPosition
+                val blog = blogAdapter.list[position]
+
                 db.collection("all_blog").whereEqualTo("userUID", auth.currentUser?.uid)
                     .get().addOnCompleteListener {
                         if (it.isSuccessful && !it.result.isEmpty) {
@@ -87,11 +94,10 @@ class MyProfile : Fragment() {
                                         "Blog Deleted Successfully",
                                         Toast.LENGTH_LONG
                                     ).show()
+                                    blogAdapter.remove(blog)
                                 }
                         }
                     }
-
-                blogAdapter.notifyItemRemoved(viewHolder.position)
             }
         }).attachToRecyclerView(binding.myBlogRecyclerView)
 

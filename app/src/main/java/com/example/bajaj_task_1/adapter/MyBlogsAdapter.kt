@@ -12,7 +12,7 @@ import com.example.bajaj_task_1.R
 import com.example.bajaj_task_1.model.BlogModel
 import com.google.firebase.firestore.FirebaseFirestore
 
-class MyBlogsAdapter(private val list: List<BlogModel>, private val context: Context) :
+class MyBlogsAdapter(var list: MutableList<BlogModel>, private val context: Context) :
     RecyclerView.Adapter<MyBlogsAdapter.ViewHolder>() {
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val mblogListTitle: TextView = itemView.findViewById(R.id.mblogListTitle)
@@ -36,6 +36,14 @@ class MyBlogsAdapter(private val list: List<BlogModel>, private val context: Con
 
         holder.mDeleteBlog.setOnClickListener {
             Toast.makeText(context, "Swipe to delete blog", Toast.LENGTH_LONG).show()
+        }
+    }
+
+    fun remove(blog: BlogModel) {
+        val index = list.indexOf(blog)
+        if (index != -1) {
+            list.removeAt(index)
+            notifyItemRemoved(index)
         }
     }
 }
